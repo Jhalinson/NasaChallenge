@@ -1,0 +1,48 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 11.146 s <<< FAILURE! - in TestSuite
+retrievingAndComparingTheFirstTenMarsPhotos(org.deviget.qa.tests.NasaApiTest)  Time elapsed: 5.236 s  <<< FAILURE!
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])
+	at org.deviget.qa.tests.NasaApiTest.retrievingAndComparingTheFirstTenMarsPhotos(NasaApiTest.java:65)
+
+retrievingFirst10MarsPhotosFrom1000MartianSolCuriosity(org.deviget.qa.tests.NasaApiTest)  Time elapsed: 0.752 s  <<< FAILURE!
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])
+	at org.deviget.qa.tests.NasaApiTest.retrievingFirst10MarsPhotosFrom1000MartianSolCuriosity(NasaApiTest.java:31)
+
+retrievingFirstTenMarsPhotosOnEarthDate(org.deviget.qa.tests.NasaApiTest)  Time elapsed: 0.789 s  <<< FAILURE!
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])
+	at org.deviget.qa.tests.NasaApiTest.retrievingFirstTenMarsPhotosOnEarthDate(NasaApiTest.java:45)
+
+validatingTheAmountOfPicturesByCamera(org.deviget.qa.tests.NasaApiTest)  Time elapsed: 0.73 s  <<< FAILURE!
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])
+	at org.deviget.qa.tests.NasaApiTest.validatingTheAmountOfPicturesByCamera(NasaApiTest.java:93)
+

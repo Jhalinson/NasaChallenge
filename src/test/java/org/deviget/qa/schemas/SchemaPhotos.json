@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome3",
+  "definitions": {
+    "Welcome3": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "photos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Photo"
+          }
+        }
+      },
+      "required": [
+        "photos"
+      ],
+      "title": "Welcome3"
+    },
+    "Photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "sol": {
+          "type": "integer"
+        },
+        "camera": {
+          "$ref": "#/definitions/Camera"
+        },
+        "img_src": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "http"
+          ],
+          "qt-uri-extensions": [
+            ".jpg"
+          ]
+        },
+        "earth_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "rover": {
+          "$ref": "#/definitions/Rover"
+        }
+      },
+      "required": [
+        "camera",
+        "earth_date",
+        "id",
+        "img_src",
+        "rover",
+        "sol"
+      ],
+      "title": "Photo"
+    },
+    "Camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "$ref": "#/definitions/CameraName"
+        },
+        "rover_id": {
+          "type": "integer"
+        },
+        "full_name": {
+          "$ref": "#/definitions/FullName"
+        }
+      },
+      "required": [
+        "full_name",
+        "id",
+        "name",
+        "rover_id"
+      ],
+      "title": "Camera"
+    },
+    "Rover": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "$ref": "#/definitions/RoverName"
+        },
+        "landing_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "launch_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "status": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "id",
+        "landing_date",
+        "launch_date",
+        "name",
+        "status"
+      ],
+      "title": "Rover"
+    },
+    "FullName": {
+      "type": "string",
+      "enum": [
+        "Front Hazard Avoidance Camera",
+        "Rear Hazard Avoidance Camera",
+        "Mast Camera"
+      ],
+      "title": "FullName"
+    },
+    "CameraName": {
+      "type": "string",
+      "enum": [
+        "FHAZ",
+        "RHAZ",
+        "MAST"
+      ],
+      "title": "CameraName"
+    },
+    "RoverName": {
+      "type": "string",
+      "enum": [
+        "Curiosity"
+      ],
+      "title": "RoverName"
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "active"
+      ],
+      "title": "Status"
+    }
+  }
+}

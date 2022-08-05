@@ -1,0 +1,45 @@
+# SDET-test
+ ## Nasa Challenge
+ Create a framework for testing NASA's API.
+
+ ### Project Notes
+
+ We would like to test different scenarios that the API offers:
+ 1. Retrieve the first 10 Mars photos made by "Curiosity" on 1000 Martian sol.
+ 2. Retrieve the first 10 Mars photos made by "Curiosity" on Earth date equal to 1000 Martian sol.
+ 3. Retrieve and compare the first 10 Mars photos made by "Curiosity" on 1000 sol and on Earth date equal to 1000 Martian sol.
+ 4. Validate that the amounts of pictures that each "Curiosity" camera took on 1000 Mars sol is not greater than 10 times the amount taken by other cameras on the same date.
+
+ ### Tools Used
+
+ - Java - Programming language
+ - TestNG - Testing framework
+ - Rest Assured - Testing and validating REST services
+ - Jackson - Serialization/Deserialization.
+ - Lombok - plugin support
+ - Extent Report, Allure Report - Reports
+ - Gson - To convert Java Objects into their JSON representation
+ - json - Support Json files
+
+
+ ### Project execution
+
+ - Command line:
+   - Download or clone the project
+   - Open a terminal
+   - Go to the project path
+   - Execute the following command: `mvn clean test` or `mvn install`
+ - Models: `src/main/java/org/deviget/qa/models`
+ - Test File: `src/test/java/org/deviget/qa/tests/NasaApiTest.java`
+ - Report: `extent-test-output/index.html`
+
+ ### Requirement: If you want to see allure report, you must install allure on your machine.
+
+  - MacOS: brew install allure
+  - Windows:
+      - Download the latest version as zip archive from Maven Central.
+      - Unpack the archive to allure-commandline directory.
+      - Navigate to bin directory.
+      - Use allure.bat for Windows or allure for other Unix platforms.
+      - Add allure to system PATH.
+

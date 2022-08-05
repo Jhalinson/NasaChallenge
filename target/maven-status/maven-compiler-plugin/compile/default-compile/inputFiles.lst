@@ -1,0 +1,13 @@
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/models/Camera.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/models/Photos.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/exceptions/MethodNotSupportedException.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/models/Photo.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/models/Root.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/utils/ExcelUtils.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/utils/PropertyReader.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/utils/Configuration.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/models/Rovers.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/models/Rover.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/constants/FrameworkPaths.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/exceptions/RequestError.java
+/Users/u44992/Desktop/SDET-Backend/src/main/java/org/deviget/qa/reports/ExtentReport.java

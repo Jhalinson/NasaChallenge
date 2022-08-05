@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="0" failed="4" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-04T09:48:21 AST" name="Surefire suite" finished-at="2022-08-04T09:48:30 AST" duration-ms="9539">
+    <groups>
+    </groups>
+    <test started-at="2022-08-04T09:48:21 AST" name="Surefire test" finished-at="2022-08-04T09:48:30 AST" duration-ms="9539">
+      <class name="org.deviget.qa.tests.NasaApiTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.deviget.qa.tests.NasaApiTest@443118b0]" started-at="2022-08-04T09:48:21 AST" name="setUp" finished-at="2022-08-04T09:48:22 AST" duration-ms="1409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="retrievingAndComparingTheFirstTenMarsPhotos()[pri:0, instance:org.deviget.qa.tests.NasaApiTest@443118b0]" started-at="2022-08-04T09:48:23 AST" name="retrievingAndComparingTheFirstTenMarsPhotos" description="Retrieve and compare the first 10 Mars photos made by &quot;Curiosity&quot; on 1000 sol and on Earth date equal to 1000 Martian sol" finished-at="2022-08-04T09:48:28 AST" duration-ms="5258" status="FAIL">
+          <exception class="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException">
+            <message>
+              <![CDATA[Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])
+at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127)
+at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176)
+at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+at com.fasterxml.jackson.databind.ObjectMapper$readValue$0.call(Unknown Source)
+at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:46)
+at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
+at io.restassured.mapper.ObjectMapper$deserialize.call(Unknown Source)
+at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:238)
+at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$0.callStatic(Unknown Source)
+at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:59)
+at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
+at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+at org.deviget.qa.tests.NasaApiTest.retrievingAndComparingTheFirstTenMarsPhotos(NasaApiTest.java:65)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrievingAndComparingTheFirstTenMarsPhotos -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.deviget.qa.tests.NasaApiTest@443118b0]" started-at="2022-08-04T09:48:28 AST" name="setUp" finished-at="2022-08-04T09:48:28 AST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="retrievingFirst10MarsPhotosFrom1000MartianSolCuriosity()[pri:0, instance:org.deviget.qa.tests.NasaApiTest@443118b0]" started-at="2022-08-04T09:48:28 AST" name="retrievingFirst10MarsPhotosFrom1000MartianSolCuriosity" description="Retrieve the first 10 Mars photos made by &quot;Curiosity&quot; on 1000 Martian sol." finished-at="2022-08-04T09:48:29 AST" duration-ms="751" status="FAIL">
+          <exception class="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException">
+            <message>
+              <![CDATA[Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])
+at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127)
+at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176)
+at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+at com.fasterxml.jackson.databind.ObjectMapper$readValue$0.call(Unknown Source)
+at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:46)
+at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
+at io.restassured.mapper.ObjectMapper$deserialize.call(Unknown Source)
+at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:238)
+at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$0.callStatic(Unknown Source)
+at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:59)
+at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
+at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+at org.deviget.qa.tests.NasaApiTest.retrievingFirst10MarsPhotosFrom1000MartianSolCuriosity(NasaApiTest.java:31)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrievingFirst10MarsPhotosFrom1000MartianSolCuriosity -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.deviget.qa.tests.NasaApiTest@443118b0]" started-at="2022-08-04T09:48:29 AST" name="setUp" finished-at="2022-08-04T09:48:29 AST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="retrievingFirstTenMarsPhotosOnEarthDate()[pri:0, instance:org.deviget.qa.tests.NasaApiTest@443118b0]" started-at="2022-08-04T09:48:29 AST" name="retrievingFirstTenMarsPhotosOnEarthDate" description="Retrieve the first 10 Mars photos made by &quot;Curiosity&quot; on Earth date equal to 1000 Martian sol" finished-at="2022-08-04T09:48:29 AST" duration-ms="787" status="FAIL">
+          <exception class="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException">
+            <message>
+              <![CDATA[Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])
+at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127)
+at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176)
+at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+at com.fasterxml.jackson.databind.ObjectMapper$readValue$0.call(Unknown Source)
+at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:46)
+at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
+at io.restassured.mapper.ObjectMapper$deserialize.call(Unknown Source)
+at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:238)
+at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$0.callStatic(Unknown Source)
+at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:59)
+at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
+at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+at org.deviget.qa.tests.NasaApiTest.retrievingFirstTenMarsPhotosOnEarthDate(NasaApiTest.java:45)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrievingFirstTenMarsPhotosOnEarthDate -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.deviget.qa.tests.NasaApiTest@443118b0]" started-at="2022-08-04T09:48:29 AST" name="setUp" finished-at="2022-08-04T09:48:29 AST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validatingTheAmountOfPicturesByCamera()[pri:0, instance:org.deviget.qa.tests.NasaApiTest@443118b0]" started-at="2022-08-04T09:48:29 AST" name="validatingTheAmountOfPicturesByCamera" description="Validate that the amounts of pictures that each &quot;Curiosity&quot; camera took on 1000 Mars sol is not greater than 10 times the amount taken by other cameras on the same date." finished-at="2022-08-04T09:48:30 AST" duration-ms="729" status="FAIL">
+          <exception class="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException">
+            <message>
+              <![CDATA[Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class org.deviget.qa.models.Photos), not marked as ignorable (one known property: "photos"])
+ at [Source: (String)"{
+  "error": {
+    "code": "OVER_RATE_LIMIT",
+    "message": "You have exceeded your rate limit. Try again later or contact us at https://api.nasa.gov:443/contact/ for assistance"
+  }
+}"; line: 2, column: 13] (through reference chain: org.deviget.qa.models.Photos["error"])
+at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127)
+at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176)
+at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+at com.fasterxml.jackson.databind.ObjectMapper$readValue$0.call(Unknown Source)
+at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:46)
+at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
+at io.restassured.mapper.ObjectMapper$deserialize.call(Unknown Source)
+at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:238)
+at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$0.callStatic(Unknown Source)
+at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:59)
+at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
+at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+at org.deviget.qa.tests.NasaApiTest.validatingTheAmountOfPicturesByCamera(NasaApiTest.java:93)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatingTheAmountOfPicturesByCamera -->
+      </class> <!-- org.deviget.qa.tests.NasaApiTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
